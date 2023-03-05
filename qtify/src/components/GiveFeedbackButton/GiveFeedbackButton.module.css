@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins&family=Roboto:wght@500&family=Secular+One&display=swap");
 
 .giveFeedback {
-  border-radius: 5px;
+  border-radius: 10px;
   width: 170px;
   height: 40;
   color: var(--color-primary);

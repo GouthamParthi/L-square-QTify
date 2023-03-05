@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&family=Roboto:wght@500&family=Secular+One&display=swap");
+
 :root {
   /* Global variables to be defined here */
   --color-primary: #34c94b;
@@ -16,6 +18,7 @@
 html,
 body {
   height: 100%;
+  font-family: "Poppins", sans-serif;
 }
 body {
   line-height: 1.5;

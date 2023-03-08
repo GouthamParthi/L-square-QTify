@@ -1,6 +1,6 @@
 import React from "react";
-import SearchIcon from "@mui/icons-material/Search";
 import styles from "./Search.module.css";
+const searchIcon = require("../../assets/Search icon.png");
 function Search() {
   return (
     <div>
@@ -11,7 +11,11 @@ function Search() {
           placeholder="Search a song of your choice"
         />
         <button className={styles.searchButton}>
-          <SearchIcon />
+          <img
+            src={searchIcon}
+            className={styles.searchIcon}
+            alt="searchIcon"
+          />
         </button>
       </div>
     </div>

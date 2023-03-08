@@ -1,4 +1,3 @@
-import { Headphones } from "@mui/icons-material";
 import React from "react";
 import styles from "./HeroSection.module.css";
 const headphone = require("../../assets/vibrating-headphone.png");

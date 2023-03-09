@@ -1,6 +1,8 @@
 .card {
   width: 159px;
   font-weight: 400;
+  margin-right: 40px;
+  margin-bottom: 25px;
 }
 .card img {
   width: 159px;
@@ -10,7 +12,8 @@
   border-top-right-radius: 10px;
 }
 .followsPill {
-  width: 118px;
+  width: 90px;
+
   height: 23px;
   border-radius: 10px;
   color: var(--color-white);

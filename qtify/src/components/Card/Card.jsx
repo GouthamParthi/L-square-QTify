@@ -4,7 +4,6 @@ import styles from "./Card.module.css";
 const sampleImg = require("../../assets/sampleCardImg.jpeg");
 
 function Card({ songs }) {
-  console.log(`https://image.tmdb.org/t/p/w500${songs.poster_path}`);
   return (
     <div className={styles.card}>
       <img

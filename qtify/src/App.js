@@ -10,7 +10,6 @@ export default function App() {
       const songsResponse = await axios.get(
         "https://api.themoviedb.org/3/movie/top_rated?api_key=025e2d8b1a2b665ad499bc1179bb0d38"
       );
-      console.log(songsResponse.data.results);
       setListOfSongs(songsResponse.data.results);
     } catch (e) {
       alert("You should check the backend is running");
@@ -21,7 +20,7 @@ export default function App() {
       await fetchSongs();
     };
     handleFetch();
-    console.log(listOfSongs);
+  
   }, []);
   return (
     <div className="App">

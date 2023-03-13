@@ -1,8 +1,6 @@
 import React from "react";
 import styles from "./Card.module.css";
 
-const sampleImg = require("../../assets/sampleCardImg.jpeg");
-
 function Card({ songs }) {
   return (
     <div className={styles.card}>

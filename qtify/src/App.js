@@ -20,13 +20,12 @@ export default function App() {
       await fetchSongs();
     };
     handleFetch();
-  
   }, []);
   return (
     <div className="App">
       <Navbar />
       <HeroSection />
-      {listOfSongs.length != 0 ? <Carousel listOfSongs={listOfSongs} /> : null}
+      {listOfSongs ? <Carousel listOfSongs={listOfSongs} /> : null}
     </div>
   );
 }

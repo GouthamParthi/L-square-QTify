@@ -1,15 +1,14 @@
 import React from "react";
 import styles from "./Card.module.css";
 
-function Card({ songs }) {
-  console.log(songs);
+function Card({ title, image, follows }) {
   return (
     <div className={styles.card}>
-      <img src={songs.image} alt="CardImage" />
-      <section className={styles.section}>
-        <div className={styles.followsPill}>{songs.likes}Follows</div>
+      <img src={image} alt="CardImage" loading="lazy" />
+      <section className={styles.decriptionArea}>
+        <div className={styles.followsPill}>{follows} Follows</div>
       </section>
-      <header className={styles.collections}>{songs.title}</header>
+      <header className={styles.collections}>{title}</header>
     </div>
   );
 }

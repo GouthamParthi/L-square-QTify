@@ -5,7 +5,7 @@ import AccordionSummary from "@mui/material/AccordionSummary";
 import Typography from "@mui/material/Typography";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import styles from "./Accordion.module.css";
-import { faQuestion } from "@fortawesome/free-solid-svg-icons";
+
 function Accordions({ faqsList }) {
   const [expanded, setExpanded] = React.useState(false);
 

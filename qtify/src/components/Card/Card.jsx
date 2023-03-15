@@ -7,7 +7,7 @@ function Card({ title, image, follows, likes }) {
       <img src={image} alt="CardImage" loading="lazy" />
       <section className={styles.decriptionArea}>
         <div className={styles.followsPill}>
-          {likes ? `${likes} Likes` : `${follows} Follows`}
+          {likes !== undefined ? `${likes} Likes` : `${follows} Follows`}
         </div>
       </section>
       <header className={styles.collections}>{title}</header>

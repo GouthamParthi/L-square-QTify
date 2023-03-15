@@ -5,7 +5,7 @@ import Card from "../Card/Card";
 
 import { fetchGenres } from "../Api/Api";
 import TabsWithIndicator from "../TabsWithIndicator/TabWithIndicator";
-function Section({ type, albums, genreTab }) {
+function Section({ type, albums, genreTab, handleFilter }) {
   const [carouselOn, setCarouselOn] = useState(true);
   const handleToggle = () => {
     setCarouselOn((prev) => !prev);
@@ -31,7 +31,9 @@ function Section({ type, albums, genreTab }) {
       </div>
 
       {/*filter*/}
-      {genreTab ? <TabsWithIndicator genres={genres} /> : null}
+      {genreTab ? (
+        <TabsWithIndicator genres={genres} handleFilter={handleFilter} />
+      ) : null}
       <div className={styles.cards}>
         {!carouselOn ? (
           albums.map((album) => {
@@ -41,6 +43,7 @@ function Section({ type, albums, genreTab }) {
                 title={album.title}
                 image={album.image}
                 follows={album.follows}
+                likes={album.likes}
               />
             );
           })

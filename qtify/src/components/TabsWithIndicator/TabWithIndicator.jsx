@@ -2,11 +2,13 @@ import React from "react";
 import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
 import Box from "@mui/material/Box";
-function TabsWithIndicator({ genres }) {
+function TabsWithIndicator({ genres, handleFilter }) {
   const [value, setValue] = React.useState("all");
 
   const handleChange = (event, newValue) => {
+    console.log(newValue);
     setValue(newValue);
+    handleFilter(newValue);
   };
   return (
     <Box sx={{ width: "100%" }}>

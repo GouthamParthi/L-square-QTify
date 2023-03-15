@@ -9,6 +9,7 @@ export default function App() {
       <HeroSection />
       <TopAlbums />
       <NewAlbums />
+      <hr style={{ border: "1px solid var(--color-primary)", width: "100%" }} />
     </div>
   );
 }

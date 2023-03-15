@@ -19,7 +19,7 @@ function Section({ type, albums }) {
       </div>
 
       {/*filter*/}
-      <div className={styles.card}>
+      <div className={styles.cards}>
         {!carouselOn ? (
           albums.map((album) => {
             return (

@@ -12,7 +12,7 @@
   cursor: pointer;
   transition: ease-in-out;
 }
-.card {
+.cards {
   display: flex;
   flex-wrap: wrap;
   gap: 30px;

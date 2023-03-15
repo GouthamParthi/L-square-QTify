@@ -10,7 +10,7 @@ function CarouselPrev() {
         width: "32px",
         height: "32px",
         left: "0px",
-        top: "86px",
+        top: "33%",
         zIndex: 10,
         borderRadius: "50%",
         background: "var(--color-primary)",

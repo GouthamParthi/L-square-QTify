@@ -11,7 +11,7 @@ function Songs() {
     handleFetch();
   }, []);
   return (
-    <div>{songs ? <Section type="Songs" albums={songs} /> : null}</div>
+    <div>{songs ? <Section type="Songs" albums={songs} genreTab /> : null}</div>
   );
 }
 

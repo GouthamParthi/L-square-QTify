@@ -1,12 +1,25 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Carousel from "../Carousel/Carousel";
 import styles from "./Section.module.css";
 import Card from "../Card/Card";
-function Section({ type, albums }) {
+
+import { fetchGenres } from "../Api/Api";
+import TabsWithIndicator from "../TabsWithIndicator/TabWithIndicator";
+function Section({ type, albums, genreTab }) {
   const [carouselOn, setCarouselOn] = useState(true);
   const handleToggle = () => {
     setCarouselOn((prev) => !prev);
   };
+
+  const [genres, setGenres] = useState();
+  useEffect(() => {
+    const handleFetch = async () => {
+      const response = await fetchGenres();
+      setGenres(response);
+    };
+    handleFetch();
+    console.log(genres);
+  }, []);
   return (
     <div className={styles.section}>
       <div className={styles.sectionHeader}>
@@ -19,6 +32,7 @@ function Section({ type, albums }) {
       </div>
 
       {/*filter*/}
+      {genreTab ? <TabsWithIndicator genres={genres} /> : null}
       <div className={styles.cards}>
         {!carouselOn ? (
           albums.map((album) => {
@@ -34,8 +48,14 @@ function Section({ type, albums }) {
         ) : (
           <Carousel
             albums={albums}
-            renderComponent={(id, title, image, follows) => (
-              <Card key={id} title={title} image={image} follows={follows} />
+            renderComponent={(id, title, image, follows, likes) => (
+              <Card
+                key={id}
+                title={title}
+                image={image}
+                follows={follows}
+                likes={likes}
+              />
             )}
           />
         )}

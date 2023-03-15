@@ -10,12 +10,18 @@ function Carousel({ albums, renderComponent }) {
       slidesPerView={"auto"}
       onSlideChange={() => console.log("slide change")}
       onSwiper={(swiper) => console.log(swiper)}
-      style={{ paddingTop: "18px", paddingLeft: "8px", paddingRight: "8px" }}
+      style={{ paddingTop: "18px", paddingLeft: "8px" }}
     >
       <CarouselPrev />
       {albums.map((album) => (
         <SwiperSlide>
-          {renderComponent(album.id, album.title, album.image, album.follows)}
+          {renderComponent(
+            album.id,
+            album.title,
+            album.image,
+            album.follows,
+            album.likes
+          )}
         </SwiperSlide>
       ))}
       ...

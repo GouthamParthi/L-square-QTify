@@ -1,12 +1,14 @@
 import React from "react";
 import styles from "./Card.module.css";
 
-function Card({ title, image, follows }) {
+function Card({ title, image, follows, likes }) {
   return (
     <div className={styles.card}>
       <img src={image} alt="CardImage" loading="lazy" />
       <section className={styles.decriptionArea}>
-        <div className={styles.followsPill}>{follows} Follows</div>
+        <div className={styles.followsPill}>
+          {likes ? `${likes} Likes` : `${follows} Follows`}
+        </div>
       </section>
       <header className={styles.collections}>{title}</header>
     </div>

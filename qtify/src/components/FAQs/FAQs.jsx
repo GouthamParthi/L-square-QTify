@@ -2,7 +2,6 @@ import React from "react";
 import Accordions from "../Accordion/Accordion";
 import styles from "./FAQs.module.css";
 function FAQs() {
-  const [expanded, setExpanded] = React.useState(false);
   const faqsList = [
     {
       fQuestion: "Is QTify free to use?",
@@ -16,9 +15,6 @@ function FAQs() {
       panel: 2,
     },
   ];
-  const handleChange = (panel) => (event, isExpanded) => {
-    setExpanded(isExpanded ? panel : false);
-  };
   return (
     <div className={styles.faq}>
       <header>FAQs</header>

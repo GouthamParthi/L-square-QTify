@@ -11,14 +11,13 @@ function Section({ type, albums, genreTab }) {
     setCarouselOn((prev) => !prev);
   };
 
-  const [genres, setGenres] = useState();
+  const [genres, setGenres] = useState([]);
   useEffect(() => {
     const handleFetch = async () => {
       const response = await fetchGenres();
       setGenres(response);
     };
     handleFetch();
-    console.log(genres);
   }, []);
   return (
     <div className={styles.section}>

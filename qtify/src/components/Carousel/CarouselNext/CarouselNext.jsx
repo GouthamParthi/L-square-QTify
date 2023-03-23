@@ -1,27 +1,15 @@
 import React from "react";
 import { useSwiper } from "swiper/react";
 import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
+import styles from "./CarouselNext.module.css";
 function CarouselNext() {
   const swiper = useSwiper();
   return (
     <div
-      style={{
-        position: "absolute",
-        width: "32px",
-        height: "32px",
-        right: "0px",
-        top: "33%",
-        zIndex: 20,
-        borderRadius: "50%",
-        background: "var(--color-primary)",
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        cursor: "pointer",
-      }}
       onClick={() => {
         swiper.slideNext();
       }}
+      className={styles.carouselNext}
     >
       <KeyboardArrowRightIcon />
     </div>

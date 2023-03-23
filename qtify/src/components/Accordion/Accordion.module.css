@@ -1,0 +1,21 @@
+.accordion {
+  width: 1135px;
+  background: var(--color-black);
+  color: var(--color-white);
+  border: 1px solid var(--color-white);
+  border-radius: 10px;
+  margin-bottom: 24px;
+}
+.accordionDetails {
+  background: var(--color-white);
+  color: var(--color-black);
+  border-bottom-left-radius: 9px;
+  border-bottom-right-radius: 9px;
+}
+.accordionSummary {
+  border-bottom-left-radius: "10px";
+}
+.expandIcon {
+  color: var(--color-primary);
+  font-size: 40px;
+}

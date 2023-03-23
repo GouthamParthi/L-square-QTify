@@ -13,33 +13,17 @@ function Accordions({ faqsList }) {
     setExpanded(isExpanded ? panel : false);
   };
   return (
-    <div className={styles.accordion}>
+    <div>
       {faqsList.map((faq) => {
         return (
           <Accordion
             expanded={expanded === `panel${faq.panel}`}
             onChange={handleChange(`panel${faq.panel}`)}
-            style={{
-              width: "1135px",
-              background: "var(--color-black)",
-              color: "var(--color-white)",
-              border: "1px solid var(--color-white)",
-              borderRadius: "10px",
-              marginBottom: "24px",
-            }}
+            className={styles.accordion}
           >
             <AccordionSummary
-              expandIcon={
-                <ExpandMoreIcon
-                  style={{
-                    color: "var(--color-primary)",
-                    fontSize: "40px",
-                  }}
-                />
-              }
-              style={{
-                borderBottomLeftRadius: "10px",
-              }}
+              expandIcon={<ExpandMoreIcon className={styles.expandIcon} />}
+              className={styles.accordionSummary}
               aria-controls={`panel${faq.panel}bh-content`}
               id={`panel${faq.panel}bh-header`}
             >
@@ -47,14 +31,7 @@ function Accordions({ faqsList }) {
                 {faq.fQuestion}
               </Typography>
             </AccordionSummary>
-            <AccordionDetails
-              style={{
-                background: "var(--color-white)",
-                color: "var(--color-black)",
-                borderBottomLeftRadius: "9px",
-                borderBottomRightRadius: "9px",
-              }}
-            >
+            <AccordionDetails className={styles.accordionDetails}>
               <Typography>{faq.fAnswer}</Typography>
             </AccordionDetails>
           </Accordion>

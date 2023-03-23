@@ -3,6 +3,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import CarouselPrev from "./CarouselPrev/CarouselPrev";
 import CarouselNext from "./CarouselNext/CarouselNext";
+import styles from "./Carousel.module.css";
 function Carousel({ albums, renderComponent }) {
   return (
     <Swiper
@@ -10,7 +11,7 @@ function Carousel({ albums, renderComponent }) {
       slidesPerView={"auto"}
       onSlideChange={() => console.log("slide change")}
       onSwiper={(swiper) => console.log(swiper)}
-      style={{ paddingTop: "18px", paddingLeft: "8px" }}
+      className={styles.swiper}
     >
       <CarouselPrev />
       {albums.map((album) => (
